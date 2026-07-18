@@ -19,7 +19,6 @@
             <a href="#home">Home</a>
             <a href="#services">Services</a>
             <a href="#timings">Timings</a>
-            <a href="#gallery">Gallery</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -72,22 +71,6 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <h2>Our Shop Gallery</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600" alt="Salon Interior">
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600" alt="Hair Styling">
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600" alt="Barber Shop">
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact & Location</h2>
@@ -109,34 +92,6 @@
     <footer>
         <p>&copy; 2026 Shree Scissor Palace. All Rights Reserved.</p>
     </footer>
-
-    <!-- Lightbox Code for Gallery Popup -->
-    <script>
-        document.querySelectorAll('.gallery-item img').forEach(image => {
-            image.onclick = () => {
-                const popup = document.createElement('div');
-                popup.style.position = 'fixed';
-                popup.style.top = '0'; popup.style.left = '0';
-                popup.style.width = '100%'; popup.style.height = '100%';
-                popup.style.backgroundColor = 'rgba(0,0,0,0.9)';
-                popup.style.zIndex = '10000';
-                popup.style.display = 'flex';
-                popup.style.justifyContent = 'center'; popup.style.alignItems = 'center';
-                popup.style.cursor = 'pointer';
-
-                const popupImg = document.createElement('img');
-                popupImg.src = image.src;
-                popupImg.style.maxWidth = '90%'; popupImg.style.maxHeight = '80%';
-                popupImg.style.borderRadius = '8px';
-                popupImg.style.border = '3px solid #d4af37';
-
-                popup.appendChild(popupImg);
-                document.body.appendChild(popup);
-
-                popup.onclick = () => { popup.remove(); }
-            }
-        });
-    </script>
 
 </body>
 </html>
